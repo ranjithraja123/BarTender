@@ -1,13 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import brew from '../../assets/images/Brew.png';
 import { Drawer, IconButton, List, ListItem, ListItemText, useTheme } from '@mui/material';
 import { useMediaQuery } from '@mui/material';
+import backgroundMusic from '../../assets/music/BeerPour.mp3'
 
 const NAvbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
+    useEffect(() => {
+        const audio = new Audio(backgroundMusic);
+        audio.play().catch((error) => {
+            console.log("Playback prevented due to user interaction policies:", error);
+        });
+    }, []);
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -115,3 +123,5 @@ const NAvbar = () => {
 };
 
 export default NAvbar;
+
+
