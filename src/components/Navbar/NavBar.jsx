@@ -12,10 +12,15 @@ const NAvbar = () => {
 
     useEffect(() => {
         const audio = new Audio(backgroundMusic);
-        audio.play().catch((error) => {
-            console.log("Playback prevented due to user interaction policies:", error);
-        });
+        const timer = setTimeout(() => {
+            audio.play().catch((error) => {
+                console.log("Playback prevented due to user interaction policies:", error);
+            });
+        }, 4000);
+
+        return () => clearTimeout(timer);
     }, []);
+
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
