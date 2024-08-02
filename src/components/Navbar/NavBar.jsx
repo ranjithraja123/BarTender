@@ -20,9 +20,9 @@ const NAvbar = () => {
             }}>
                 <div className='flex text-black items-center font-3xl font-bold'>
                     <img src={brew} width={100} alt="Brew" />
-                    {/* <h1 className='text-3xl'>
-                        𝔉𝔬𝔯𝔦𝔢𝔤𝔫 𝔩𝔦𝔮𝔬𝔲𝔯 𝔰𝔶𝔫𝔡𝔦𝔠𝔞𝔱𝔢
-                    </h1> */}
+                    <h1 className='text-3xl'>
+                        𝔉𝔬𝔯𝔦𝔢𝔤𝔫 𝔩𝔦𝔮𝔬𝔲𝔯
+                    </h1>
                 </div>
 
                 {/* Bubbles */}
