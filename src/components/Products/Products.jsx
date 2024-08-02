@@ -24,12 +24,12 @@ const Products = () => {
         <div className='p-6 ' id='products'>
           
             
-            <div className='grid grid-cols-1 sm:grid-cols-12 gap-4 p-3 rounded-lg' style={{
+            <div className='grid grid-cols-1 sm:col-span-12 md:col-span-12 sm:grid-cols-12 gap-4 p-3 rounded-lg' style={{
                 background: 'linear-gradient(to bottom right, #cb7601, #552c00, #422e15)',
                 boxShadow: '0 0 10px 5px rgb(255, 178, 0,0.7)' // Gold glow shadow
             }}>
                 <div
-                    className='col-span-1 lg:col-span-3 flex justify-center px-4 py-3'
+                    className='col-span-1 sm:col-span-12 md:col-span-12 lg:col-span-3 flex justify-center px-4 py-3'
                 //   style={{
                 //     background: 'linear-gradient(to bottom right, #cb7601, #552c00, #422e15)',
                 //     boxShadow: '0 0 10px 5px rgb(255, 178, 0,0.2)', // Gold glow shadow
@@ -58,7 +58,7 @@ const Products = () => {
                    
                 </div>
 
-                <div className='col-span-1 lg:col-span-8 flex'>
+                <div className='col-span-1 sm:col-span-12 md:col-span-12 lg:col-span-8 flex'>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
                         {filteredDrinks.map((drink, index) => (
                             <Card
@@ -78,14 +78,14 @@ const Products = () => {
                   alt={drink.Name}
                 /> */}
                                 <CardContent>
-                                    <Typography variant="h5" component="div">
+                                    <Typography variant="h5" component="div" color="white">
                                         {drink.Name}
                                     </Typography>
-                                    <Typography variant="body2" color="text.secondary">
-                                        <strong>Drink:</strong> {drink.Drink}
+                                    <Typography variant="body2" color="text.secondary" sx={{ color: 'white' }}>
+                                    <strong>Drink:</strong> {drink.Drink}
                                     </Typography>
-                                    <Typography variant="body2" color="text.secondary">
-                                        <strong>Description:</strong> {drink.Description}
+                                    <Typography variant="body2" color="text.secondary" sx={{ color: 'white' }}>
+                                    <strong>Description:</strong> {drink.Description}
                                     </Typography>
                                 </CardContent>
                             </Card>
